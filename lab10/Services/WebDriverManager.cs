@@ -18,11 +18,30 @@ public class WebDriverManager
         var homePage = new HomePage(_webDriver).OpenPage();
 
         homePage.EnterFromPlace()
-            // .EnterToPlace()
-            // .CloseToField()
             .SearchTrips();
 
         return homePage.CurrentUrl;
+    }
+
+    public bool IsMessageFieldOpened()
+    {
+        var homePage = new HomePage(_webDriver).OpenPage();
+
+        return homePage.OpenContactsField().ContactsField.Displayed;
+    }
+
+    public bool IsTourInfoFieldOpened()
+    {
+        var georgiaPage = new GeorgiaPage(_webDriver).OpenPage();
+        
+        return georgiaPage.ShowTourInfo().TourInfoField.Displayed;
+    }
+
+    public int FindToursCount()
+    {
+        var toursPage = new ToursPage(_webDriver).OpenPage();
+
+        return toursPage.Tours.Count;
     }
 
     public void DestroyDrive()

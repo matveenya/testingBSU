@@ -35,4 +35,9 @@ public class Page
     {
         return new WebDriverWait(WebDriver, TimeSpan.FromSeconds(5)).Until(driver => driver.FindElements(key));
     }
+
+    protected void ImplicitlyWait()
+    {
+        WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+    }
 }
