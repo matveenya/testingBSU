@@ -28,12 +28,12 @@ public class Page
 
     protected IWebElement FindElementBy(By key)
     {
-        return new WebDriverWait(WebDriver, TimeSpan.FromSeconds(5)).Until(driver => driver.FindElement(key));
+        return new WebDriverWait(WebDriver, TimeSpan.FromSeconds(20)).Until(driver => driver.FindElement(key));
     }
 
     protected IReadOnlyCollection<IWebElement> FindElementsBy(By key)
     {
-        return new WebDriverWait(WebDriver, TimeSpan.FromSeconds(5)).Until(driver => driver.FindElements(key));
+        return new WebDriverWait(WebDriver, TimeSpan.FromSeconds(20)).Until(driver => driver.FindElements(key));
     }
 
     protected void ImplicitlyWait()
