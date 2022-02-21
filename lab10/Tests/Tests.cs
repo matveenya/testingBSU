@@ -22,9 +22,9 @@ public class Tests
     }
 
     [Test]
-    public void OpenMessageFieldTest()
+    public void OpenContactsFieldTest()
     {
-        var result = _manager.IsMessageFieldOpened();
+        var result = _manager.IsContactsFieldOpened();
         Assert.IsTrue(result);
     }
 

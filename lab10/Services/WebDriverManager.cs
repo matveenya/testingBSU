@@ -23,7 +23,7 @@ public class WebDriverManager
         return homePage.CurrentUrl;
     }
 
-    public bool IsMessageFieldOpened()
+    public bool IsContactsFieldOpened()
     {
         var homePage = new HomePage(_webDriver).OpenPage();
 

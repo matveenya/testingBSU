@@ -10,7 +10,7 @@ public class ChromeDriverEntity
     private static IWebDriver InitializeWebDriver()
     {
         var options = new ChromeOptions();
-        options.AddArguments("--headless", "--disable-extensions");
+        options.AddArguments("--headless","--window-size=1920,1080","--disable-extensions");
         var chromeDriver = new ChromeDriver(options);
         chromeDriver.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(30));
         chromeDriver.Manage().Window.Maximize();
