@@ -14,7 +14,6 @@ public class GeorgiaPage : Page
     public GeorgiaPage ShowTourInfo()
     {
         HideTourInfoButton.Click();
-        ImplicitlyWait();
         return this;
     }
     

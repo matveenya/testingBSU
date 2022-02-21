@@ -48,7 +48,7 @@ public class HomePage : Page
     public HomePage SearchTrips()
     {
         FindButton.Click();
-        ImplicitlyWait();
+        WaitForPageToLoad();
         return this;
     }
 
