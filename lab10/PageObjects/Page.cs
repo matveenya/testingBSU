@@ -38,6 +38,6 @@ public class Page
 
     protected void ImplicitlyWait()
     {
-        WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+        WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
     }
 }
